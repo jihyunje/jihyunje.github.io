@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Jihyun Jeon</title>
+  <meta name="description" content="Selected work by Jihyun Jeon">
+
+  <style>
+    /* same styles as index.html */
+    :root { --text: #222; --muted: #595959; --link: #174f87; --border: #d8dce0; --background: #fff; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 7rem; }
+    body { margin: 0; background: var(--background); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.7; overflow-wrap: anywhere; }
+    a { color: var(--link); text-underline-offset: 0.2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--link); outline-offset: 5px; }
+    .container { width: min(100% - 2.5rem, 800px); margin-inline: auto; }
+    .site-header { position: fixed; inset: 0 0 auto; z-index: 10; background: white; border-bottom: 1px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 4.5rem; }
+    .home-link { color: var(--text); font-weight: 650; text-decoration: none; }
+    nav { display: flex; gap: 1.25rem; }
+    nav a { display: inline-block; padding-block: 0.65rem; }
+    main { padding-top: 4.5rem; }
+    .section { border-top: 1px solid var(--border); padding-block: 2.5rem; }
+    .project + .project { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    summary { color: var(--link); cursor: pointer; width: fit-content; padding-block: 0.5rem; text-decoration: underline; text-underline-offset: 0.2em; }
+    details[open] summary { margin-bottom: 0.75rem; }
+    .project-body { padding-left: 1rem; border-left: 2px solid var(--border); }
+    figure { margin: 1.5rem 0; }
+    img { display: block; max-width: 100%; height: auto; }
+    figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.65rem; }
+    /* Blog-style entry layout */
+    .project-entry { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; align-items: start; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+    .project-entry figure { margin: 0; }
+    .project-entry img { width: 100%; height: auto; display: block; }
+    .project-entry h3 { margin-top: 0; }
+    @media (max-width: 720px) { .project-entry { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .header-inner { flex-direction: column; align-items: flex-start; gap: 0; padding-block: 0.5rem; } nav { gap: 1.5rem; } main { padding-top: 7rem; } html { scroll-padding-top: 9rem; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="home-link" href="index.html">Jihyun Jeon</a>
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" aria-labelledby="work-heading">
+      <h2 id="work-heading">Selected work</h2>
+      <p class="meta">Latest projects and entries. Click a project to view its full gallery and notes.</p>
+
+      <!-- Example blog-style entry -->
+      <article class="project-entry" id="painting-assistant-entry">
+        <a href="projects/painting-assistant.html">
+          <figure>
+            <img src="images/painting-assistant/thumb.jpg" alt="Painting assistant demo thumbnail">
+          </figure>
+        </a>
+
+        <div>
+          <h3><a href="projects/painting-assistant.html">Shared-control painting assistant</a></h3>
+          <p class="meta">Research · In progress · Sep 14, 2026</p>
+          <p>Exploring robotic assistance for people with Parkinson’s disease. In this entry I show early demos, a short video, and my reflections on shared control and user agency.</p>
+          <p><a href="projects/painting-assistant.html">Read the full entry →</a></p>
+        </div>
+      </article>
+
+      <!-- Placeholder for future entries -->
+      <article class="project-entry" id="additional-project-entry">
+        <a href="#">
+          <figure>
+            <img src="images/placeholder-thumb.jpg" alt="Placeholder thumbnail">
+          </figure>
+        </a>
+        <div>
+          <h3>[Project title]</h3>
+          <p class="meta">[Type] · [Dates]</p>
+          <p>[Short excerpt describing the project. Click to view full page and gallery.]</p>
+          <p><a href="#">Read the full entry →</a></p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Jihyun Jeon · Robotics portfolio</div>
+  </footer>
+</body>
+</html>

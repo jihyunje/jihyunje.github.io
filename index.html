@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jihyun Jeon | Robotics Portfolio</title>
+  <meta name="description"
+        content="Jihyun Jeon's robotics research and engineering portfolio.">
+
+  <style>
+    /* EDIT: Change these colors if desired. */
+    :root {
+      --text: #222;
+      --muted: #595959;
+      --link: #174f87;
+      --border: #d8dce0;
+      --background: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-padding-top: 7rem;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--link);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    :focus-visible {
+      outline: 3px solid var(--link);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(100% - 2.5rem, 800px);
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -8rem;
+      left: 1rem;
+      z-index: 20;
+      padding: 0.6rem 1rem;
+      background: white;
+    }
+
+    .skip-link:focus { top: 0.5rem; }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 10;
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      min-height: 4.5rem;
+    }
+
+    .home-link {
+      color: var(--text);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    nav a {
+      display: inline-block;
+      padding-block: 0.65rem;
+    }
+
+    main { padding-top: 4.5rem; }
+
+    .intro { padding-block: 4rem 3rem; }
+
+    h1, h2, h3, h4 {
+      line-height: 1.25;
+      font-weight: 650;
+    }
+
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2.1rem, 6vw, 3rem);
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      margin: 0 0 1.5rem;
+      font-size: 1.65rem;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    h4 { margin: 1.5rem 0 0.5rem; }
+
+    p { margin: 0 0 1rem; }
+
+    .subtitle, .meta, figcaption {
+      color: var(--muted);
+    }
+
+    .subtitle { font-size: 1.1rem; }
+
+    .meta {
+      font-size: 0.9rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .section {
+      border-top: 1px solid var(--border);
+      padding-block: 2.5rem;
+    }
+
+    /* Featured projects on the homepage */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .feature-card {
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      background: white;
+    }
+
+    .feature-card img, .feature-card video { display:block; width:100%; height:auto; }
+
+
+    .project + .project {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    summary {
+      color: var(--link);
+      cursor: pointer;
+      width: fit-content;
+      padding-block: 0.5rem;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    details[open] summary { margin-bottom: 0.75rem; }
+
+    .project-body {
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+    }
+
+    figure { margin: 1.5rem 0; }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .education + .education { margin-top: 1.25rem; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-block: 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding-block: 0.5rem;
+      }
+
+      nav { gap: 1.5rem; }
+      main { padding-top: 7rem; }
+      html { scroll-padding-top: 9rem; }
+      .intro { padding-block: 2.5rem; }
+    }
+
+    @media print {
+      .site-header, .skip-link, footer { display: none; }
+      main { padding-top: 0; }
+      .container { width: 100%; }
+      .intro, .section { padding-block: 1rem; }
+    }
+  </style>
+</head>
+
+<body id="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Your name is the separate return-to-home link. -->
+      <a class="home-link" href="index.html">Jihyun Jeon</a>
+      <nav aria-label="Main navigation">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="intro" aria-labelledby="intro-heading">
+      <!-- EDIT: Your short introduction. -->
+      <h1 id="intro-heading">Jihyun Jeon</h1>
+      <p class="subtitle">Robotics · Human–Robot Interaction</p>
+      <p>
+        I am a graduate student in Robotic Systems Development at
+        Carnegie Mellon University. I am interested in creating robots
+        that can support people in uncertain, ambiguous situations.
+      </p>
+      <a href="work.html">Explore my work</a>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Selected projects</h2>
+      <p class="meta">A few highlights — click an item to see the full project page.</p>
+
+      <div class="featured-grid">
+        <article class="feature-card">
+          <a href="projects/painting-assistant.html">
+            <figure>
+              <img src="images/painting-assistant/thumb.jpg" alt="Painting assistant demo thumbnail" loading="lazy">
+              <figcaption>Shared-control painting assistant</figcaption>
+            </figure>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-heading">
+      <h2 id="more-heading">More</h2>
+      <p>Explore the full site: <a href="work.html">Work</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Jihyun Jeon · Robotics portfolio</div>
+  </footer>
+</body>
+</html>
