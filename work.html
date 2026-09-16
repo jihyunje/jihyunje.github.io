@@ -36,6 +36,20 @@
     .project-entry figure { margin: 0; }
     .project-entry img { width: 100%; height: auto; display: block; }
     .project-entry h3 { margin-top: 0; }
+    .project-thumb {
+      min-height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, #edf4fb, #d1e2f2);
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1rem;
+    }
     @media (max-width: 720px) { .project-entry { grid-template-columns: 1fr; } }
     @media (max-width: 480px) { .header-inner { flex-direction: column; align-items: flex-start; gap: 0; padding-block: 0.5rem; } nav { gap: 1.5rem; } main { padding-top: 7rem; } html { scroll-padding-top: 9rem; } }
   </style>
@@ -57,34 +71,73 @@
       <h2 id="work-heading">Selected work</h2>
       <p class="meta">Latest projects and entries. Click a project to view its full gallery and notes.</p>
 
-      <!-- Example blog-style entry -->
-      <article class="project-entry" id="painting-assistant-entry">
-        <a href="projects/painting-assistant.html">
+      <article class="project-entry" id="crater-entry">
+        <a href="projects/CRATER.html">
           <figure>
-            <img src="images/painting-assistant/thumb.jpg" alt="Painting assistant demo thumbnail">
+            <img src="projects/CRATER/media/thumbnail.jpg" alt="CRATER rover thumbnail">
           </figure>
         </a>
-
         <div>
-          <h3><a href="projects/painting-assistant.html">Shared-control painting assistant</a></h3>
-          <p class="meta">Research · In progress · Sep 14, 2026</p>
-          <p>Exploring robotic assistance for people with Parkinson’s disease. In this entry I show early demos, a short video, and my reflections on shared control and user agency.</p>
-          <p><a href="projects/painting-assistant.html">Read the full entry →</a></p>
+          <h3><a href="projects/CRATER.html">CRATER</a></h3>
+          <p class="meta">Robotics team project · 2022–2025 · Student Team Lead</p>
+          <p>Caltech Rover Autonomy, Technology, and Exploration Research is building a rugged autonomous rover for mission tasks in terrain, manipulation, and remote search-and-rescue.</p>
+          <p><a href="projects/CRATER.html">Read the full entry →</a></p>
         </div>
       </article>
 
-      <!-- Placeholder for future entries -->
-      <article class="project-entry" id="additional-project-entry">
-        <a href="#">
+      <article class="project-entry" id="tanny-grams-entry">
+        <a href="projects/Tanny-Grams.html">
           <figure>
-            <img src="images/placeholder-thumb.jpg" alt="Placeholder thumbnail">
+            <img src="projects/Tanny%20Grams/Media/thumbnail.png" alt="Tanny Grams thumbnail">
           </figure>
         </a>
         <div>
-          <h3>[Project title]</h3>
-          <p class="meta">[Type] · [Dates]</p>
-          <p>[Short excerpt describing the project. Click to view full page and gallery.]</p>
-          <p><a href="#">Read the full entry →</a></p>
+          <h3><a href="projects/Tanny-Grams.html">Tanny Grams</a></h3>
+          <p class="meta">Computer vision + robotics project · CS 134 · 2024</p>
+          <p>A robot that detects tangram pieces from an image, maps them into the real workspace, and assembles the target configuration with a pick-and-place workflow.</p>
+          <p><a href="projects/Tanny-Grams.html">Read the full entry →</a></p>
+        </div>
+      </article>
+
+      <article class="project-entry" id="coverage-planner-entry">
+        <a href="projects/coverage-planner.html">
+          <figure>
+            <img src="projects/coverage%20planner/media/thumbnail.png" alt="Coverage planner thumbnail">
+          </figure>
+        </a>
+        <div>
+          <h3><a href="projects/coverage-planner.html">Coverage Planner</a></h3>
+          <p class="meta">Robotics planning project · ME/EE/CS 133b · Sep 2026</p>
+          <p>A grid-based wavefront coverage algorithm for snow shoveling that plans a complete path from a start position to a goal while respecting obstacle and turning constraints.</p>
+          <p><a href="projects/coverage-planner.html">Read the full entry →</a></p>
+        </div>
+      </article>
+
+      <article class="project-entry" id="tennis-robot-entry">
+        <a href="projects/tennis-robot.html">
+          <figure>
+            <img src="projects/tennis%20robot/media/thumbnail.png" alt="Tennis robot thumbnail">
+          </figure>
+        </a>
+        <div>
+          <h3><a href="projects/tennis-robot.html">Tennis Robot</a></h3>
+          <p class="meta">Robotics + control project · ME 133a · Dec 2023</p>
+          <p>A 6-DOF robotic arm that tracks a launched tennis ball and computes a contact point and paddle orientation to return the ball toward a target goal.</p>
+          <p><a href="projects/tennis-robot.html">Read the full entry →</a></p>
+        </div>
+      </article>
+
+      <article class="project-entry" id="surf-entry">
+        <a href="projects/surf.html">
+          <figure>
+            <img src="projects/surf/media/thumbnail.png" alt="SURF eye tracker thumbnail">
+          </figure>
+        </a>
+        <div>
+          <h3><a href="projects/surf.html">SURF Eye Tracker</a></h3>
+          <p class="meta">Human–robot interaction project · SURF 2024 · Summer research</p>
+          <p>A VR-based eye-tracking interface using gaze intent recognition to guide a robot toward a target and support more intuitive teleoperation.</p>
+          <p><a href="projects/surf.html">Read the full entry →</a></p>
         </div>
       </article>
 

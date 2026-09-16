@@ -17,6 +17,13 @@
     main { padding-top: 4.5rem; }
     .section { border-top: 1px solid var(--border); padding-block: 2.5rem; }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.65rem; }
+    form { display: grid; gap: 1rem; max-width: 560px; }
+    label { display: grid; gap: 0.45rem; font-weight: 600; }
+    input, textarea { width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--border); border-radius: 0.5rem; font: inherit; background: #fff; color: var(--text); }
+    textarea { min-height: 160px; resize: vertical; }
+    button { appearance: none; border: 0; border-radius: 0.5rem; background: var(--link); color: white; padding: 0.8rem 1.2rem; font: inherit; font-weight: 600; cursor: pointer; width: fit-content; }
+    button:hover { opacity: 0.95; }
+    .form-note { color: var(--muted); margin-top: 0; }
   </style>
 </head>
 <body>
@@ -34,8 +41,31 @@
   <main class="container">
     <section class="section" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact</h2>
-      <p>Contact information will be added soon.</p>
-      <p>If you'd like, set up a hosted contact form and paste its public URL here.</p>
+      <p class="form-note">Send a message and I’ll get back to you.</p>
+
+      <form action="https://formspree.io/f/xvkgpbde" method="POST">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label>
+          Subject
+          <input type="text" name="_subject" placeholder="Project inquiry">
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" placeholder="Tell me about your project or opportunity." required></textarea>
+        </label>
+
+        <button type="submit">Send message</button>
+      </form>
     </section>
   </main>
 
