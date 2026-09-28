@@ -1,151 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work — Jihyun Jeon</title>
-  <meta name="description" content="Selected work by Jihyun Jeon">
-
-  <style>
-    /* same styles as index.html */
-    :root { --text: #222; --muted: #595959; --link: #174f87; --border: #d8dce0; --background: #fff; }
-    * { box-sizing: border-box; }
-    html { scroll-padding-top: 7rem; }
-    body { margin: 0; background: var(--background); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.7; overflow-wrap: anywhere; }
-    a { color: var(--link); text-underline-offset: 0.2em; }
-    a:hover { text-decoration-thickness: 2px; }
-    :focus-visible { outline: 3px solid var(--link); outline-offset: 5px; }
-    .container { width: min(100% - 2.5rem, 800px); margin-inline: auto; }
-    .site-header { position: fixed; inset: 0 0 auto; z-index: 10; background: white; border-bottom: 1px solid var(--border); }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 4.5rem; }
-    .home-link { color: var(--text); font-weight: 650; text-decoration: none; }
-    nav { display: flex; gap: 1.25rem; }
-    nav a { display: inline-block; padding-block: 0.65rem; }
-    main { padding-top: 4.5rem; }
-    .section { border-top: 1px solid var(--border); padding-block: 2.5rem; }
-    .project + .project { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-    summary { color: var(--link); cursor: pointer; width: fit-content; padding-block: 0.5rem; text-decoration: underline; text-underline-offset: 0.2em; }
-    details[open] summary { margin-bottom: 0.75rem; }
-    .project-body { padding-left: 1rem; border-left: 2px solid var(--border); }
-    figure { margin: 1.5rem 0; }
-    img { display: block; max-width: 100%; height: auto; }
-    figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
-    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.65rem; }
-    /* Blog-style entry layout */
-    .project-entry { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; align-items: start; padding: 1rem 0; border-bottom: 1px solid var(--border); }
-    .project-entry figure { margin: 0; }
-    .project-entry img { width: 100%; height: auto; display: block; }
-    .project-entry h3 { margin-top: 0; }
-    .project-thumb {
-      min-height: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      background: linear-gradient(135deg, #edf4fb, #d1e2f2);
-      color: var(--text);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 1rem;
-    }
-    @media (max-width: 720px) { .project-entry { grid-template-columns: 1fr; } }
-    @media (max-width: 480px) { .header-inner { flex-direction: column; align-items: flex-start; gap: 0; padding-block: 0.5rem; } nav { gap: 1.5rem; } main { padding-top: 7rem; } html { scroll-padding-top: 9rem; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Jihyun Jeon</title>
+<meta name="description" content="Robotics projects by Jihyun Jeon in field robotics, computer vision, manipulation, planning, and human-robot interaction.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="home-link" href="index.html">Jihyun Jeon</a>
-      <nav aria-label="Main navigation">
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="section" aria-labelledby="work-heading">
-      <h2 id="work-heading">Selected work</h2>
-      <p class="meta">Latest projects and entries. Click a project to view its full gallery and notes.</p>
-
-      <article class="project-entry" id="crater-entry">
-        <a href="projects/CRATER.html">
-          <figure>
-            <img src="projects/CRATER/media/thumbnail.jpg" alt="CRATER rover thumbnail">
-          </figure>
-        </a>
-        <div>
-          <h3><a href="projects/CRATER.html">CRATER</a></h3>
-          <p class="meta">Robotics team project · 2022–2025 · Student Team Lead</p>
-          <p>Caltech Rover Autonomy, Technology, and Exploration Research is building a rugged autonomous rover for mission tasks in terrain, manipulation, and remote search-and-rescue.</p>
-          <p><a href="projects/CRATER.html">Read the full entry →</a></p>
-        </div>
-      </article>
-
-      <article class="project-entry" id="tanny-grams-entry">
-        <a href="projects/Tanny-Grams.html">
-          <figure>
-            <img src="projects/Tanny%20Grams/Media/thumbnail.png" alt="Tanny Grams thumbnail">
-          </figure>
-        </a>
-        <div>
-          <h3><a href="projects/Tanny-Grams.html">Tanny Grams</a></h3>
-          <p class="meta">Computer vision + robotics project · CS 134 · 2024</p>
-          <p>A robot that detects tangram pieces from an image, maps them into the real workspace, and assembles the target configuration with a pick-and-place workflow.</p>
-          <p><a href="projects/Tanny-Grams.html">Read the full entry →</a></p>
-        </div>
-      </article>
-
-      <article class="project-entry" id="coverage-planner-entry">
-        <a href="projects/coverage-planner.html">
-          <figure>
-            <img src="projects/coverage%20planner/media/thumbnail.png" alt="Coverage planner thumbnail">
-          </figure>
-        </a>
-        <div>
-          <h3><a href="projects/coverage-planner.html">Coverage Planner</a></h3>
-          <p class="meta">Robotics planning project · ME/EE/CS 133b · Sep 2026</p>
-          <p>A grid-based wavefront coverage algorithm for snow shoveling that plans a complete path from a start position to a goal while respecting obstacle and turning constraints.</p>
-          <p><a href="projects/coverage-planner.html">Read the full entry →</a></p>
-        </div>
-      </article>
-
-      <article class="project-entry" id="tennis-robot-entry">
-        <a href="projects/tennis-robot.html">
-          <figure>
-            <img src="projects/tennis%20robot/media/thumbnail.png" alt="Tennis robot thumbnail">
-          </figure>
-        </a>
-        <div>
-          <h3><a href="projects/tennis-robot.html">Tennis Robot</a></h3>
-          <p class="meta">Robotics + control project · ME 133a · Dec 2023</p>
-          <p>A 6-DOF robotic arm that tracks a launched tennis ball and computes a contact point and paddle orientation to return the ball toward a target goal.</p>
-          <p><a href="projects/tennis-robot.html">Read the full entry →</a></p>
-        </div>
-      </article>
-
-      <article class="project-entry" id="surf-entry">
-        <a href="projects/surf.html">
-          <figure>
-            <img src="projects/surf/media/thumbnail.png" alt="SURF eye tracker thumbnail">
-          </figure>
-        </a>
-        <div>
-          <h3><a href="projects/surf.html">SURF Eye Tracker</a></h3>
-          <p class="meta">Human–robot interaction project · SURF 2024 · Summer research</p>
-          <p>A VR-based eye-tracking interface using gaze intent recognition to guide a robot toward a target and support more intuitive teleoperation.</p>
-          <p><a href="projects/surf.html">Read the full entry →</a></p>
-        </div>
-      </article>
-
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">Jihyun Jeon · Robotics portfolio</div>
-  </footer>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner">
+<a class="home-link" href="index.html">Jihyun Jeon</a><nav aria-label="Main navigation"><a href="work.html" aria-current="page">Projects</a><a href="about.html">About</a><a href="resume.html">Resume</a><a class="nav-cta" href="contact.html">Contact</a></nav>
+</div></header><main id="main">
+<div class="container">
+<div class="page-intro">
+<p class="eyebrow">Portfolio</p>
+<h1>Robotics projects</h1>
+<p class="lead">A selection of team and individual work across complete robot systems, perception, manipulation, planning, and interfaces. Each page explains the problem, my role, and the technical approach.</p>
+</div>
+<div class="project-grid work-grid">
+<article class="project-card"><a href="projects/CRATER.html"><div class="card-media">
+<img class="rover" src="assets/images/crater-rover.jpg" alt="CRATER rover during field testing" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">2022–2025 · Field robotics · Team lead</p>
+<h3>CRATER rover</h3>
+<p>Led integration and field readiness for a student rover with rough terrain mobility and a 6-DOF arm.</p>
+<span class="card-link">See the rover project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/Tanny-Grams.html"><div class="card-media">
+<img class="" src="projects/Tanny%20Grams/Media/thumbnail.png" alt="Tangram robot design and physical prototype" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">2024 · Computer vision · Manipulation</p>
+<h3>Tanny Grams</h3>
+<p>Used image based piece detection and coordinate transforms to guide a robot through tangram assembly.</p>
+<span class="card-link">See the manipulation project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/surf.html"><div class="card-media">
+<img class="eye" src="projects/surf/media/thumbnail.png" alt="VR gaze interface pointing toward a target" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">2024 · Research · Human–robot interaction</p>
+<h3>Gaze guided robot control</h3>
+<p>Investigated eye gaze as a higher level input for choosing a robot's target in a VR interface.</p>
+<span class="card-link">See the research project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/coverage-planner.html"><div class="card-media">
+<img class="planner" src="projects/coverage%20planner/media/thumbnail.png" alt="Grid coverage path with obstacles and directional arrows" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">Robotics coursework · Algorithms · Motion planning</p>
+<h3>Coverage planner</h3>
+<p>Designed a wavefront based coverage path for a grid with obstacle, turning, start, and goal constraints.</p>
+<span class="card-link">See the planning project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/tennis-robot.html"><div class="card-media">
+<img class="tennis" src="projects/tennis%20robot/media/thumbnail.png" alt="Robot arm and tennis ball simulation" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">2023 · Controls · Simulation</p>
+<h3>Tennis robot</h3>
+<p>Planned an intercept and paddle pose for a simulated 6-DOF arm to return a moving tennis ball.</p>
+<span class="card-link">See the simulation →</span>
+</div></a></article>
+</div>
+<section class="section"><div class="section-heading"><div><p class="eyebrow">In progress</p><h2>Current systems work</h2><p>New CMU projects at the requirements and research stage.</p></div></div>
+<div class="info-grid">
+<div class="info-box"><p class="meta">MRSD capstone · 2026–present</p><h2>Robotic surgical assistant</h2><p>Working on requirements for voice commanded instrument retrieval and handover, spanning speech, perception, manipulation, and human-safe interaction.</p></div>
+<div class="info-box"><p class="meta">CMU Robotics Institute · 2026–present</p><h2>Shared-control painting assistant</h2><p>Developing teleoperation assistance for people with Parkinson's disease and exploring intent-aware support that preserves user agency.</p><p><a href="projects/painting-assistant.html">Research overview →</a></p></div>
+</div></section>
+</div></main><footer class="site-footer"><div class="container footer-inner">
+<span>© 2026 Jihyun Jeon</span><span><a href="work.html">Projects</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></span>
+</div></footer>
 </body>
 </html>

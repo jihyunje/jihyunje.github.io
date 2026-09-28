@@ -1,316 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jihyun Jeon | Robotics Portfolio</title>
-  <meta name="description"
-        content="Jihyun Jeon's robotics research and engineering portfolio.">
-
-  <style>
-    /* EDIT: Change these colors if desired. */
-    :root {
-      --text: #222;
-      --muted: #595959;
-      --link: #174f87;
-      --border: #d8dce0;
-      --background: #fff;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-padding-top: 7rem;
-    }
-
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", sans-serif;
-      font-size: 17px;
-      line-height: 1.7;
-      overflow-wrap: anywhere;
-    }
-
-    a {
-      color: var(--link);
-      text-underline-offset: 0.2em;
-    }
-
-    a:hover { text-decoration-thickness: 2px; }
-
-    :focus-visible {
-      outline: 3px solid var(--link);
-      outline-offset: 5px;
-    }
-
-    .container {
-      width: min(100% - 2.5rem, 800px);
-      margin-inline: auto;
-    }
-
-    .skip-link {
-      position: fixed;
-      top: -8rem;
-      left: 1rem;
-      z-index: 20;
-      padding: 0.6rem 1rem;
-      background: white;
-    }
-
-    .skip-link:focus { top: 0.5rem; }
-
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 10;
-      background: white;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      min-height: 4.5rem;
-    }
-
-    .home-link {
-      color: var(--text);
-      font-weight: 650;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.25rem;
-    }
-
-    nav a {
-      display: inline-block;
-      padding-block: 0.65rem;
-    }
-
-    main { padding-top: 4.5rem; }
-
-    .intro { padding-block: 4rem 3rem; }
-
-    h1, h2, h3, h4 {
-      line-height: 1.25;
-      font-weight: 650;
-    }
-
-    h1 {
-      margin: 0 0 0.75rem;
-      font-size: clamp(2.1rem, 6vw, 3rem);
-      letter-spacing: -0.035em;
-    }
-
-    h2 {
-      margin: 0 0 1.5rem;
-      font-size: 1.65rem;
-    }
-
-    h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    h4 { margin: 1.5rem 0 0.5rem; }
-
-    p { margin: 0 0 1rem; }
-
-    .subtitle, .meta, figcaption {
-      color: var(--muted);
-    }
-
-    .subtitle { font-size: 1.1rem; }
-
-    .meta {
-      font-size: 0.9rem;
-      margin-bottom: 0.65rem;
-    }
-
-    .section {
-      border-top: 1px solid var(--border);
-      padding-block: 2.5rem;
-    }
-
-    /* Featured projects on the homepage */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .feature-card {
-      border: 1px solid var(--border);
-      padding: 0.5rem;
-      background: white;
-    }
-
-    .feature-card img, .feature-card video { display:block; width:100%; height:auto; }
-
-
-    .project + .project {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    summary {
-      color: var(--link);
-      cursor: pointer;
-      width: fit-content;
-      padding-block: 0.5rem;
-      text-decoration: underline;
-      text-underline-offset: 0.2em;
-    }
-
-    details[open] summary { margin-bottom: 0.75rem; }
-
-    .project-body {
-      padding-left: 1rem;
-      border-left: 2px solid var(--border);
-    }
-
-    figure { margin: 1.5rem 0; }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    figcaption {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .education + .education { margin-top: 1.25rem; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding-block: 1.5rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 480px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        padding-block: 0.5rem;
-      }
-
-      nav { gap: 1.5rem; }
-      main { padding-top: 7rem; }
-      html { scroll-padding-top: 9rem; }
-      .intro { padding-block: 2.5rem; }
-    }
-
-    @media print {
-      .site-header, .skip-link, footer { display: none; }
-      main { padding-top: 0; }
-      .container { width: 100%; }
-      .intro, .section { padding-block: 1rem; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robotics Engineer | Jihyun Jeon</title>
+<meta name="description" content="Jihyun Jeon's robotics portfolio: rover systems, manipulation, planning, and human-robot interaction. Seeking a Summer 2027 internship.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jihyun Jeon | Robotics Engineer">
+<meta property="og:description" content="Rover systems, manipulation, planning, and human–robot interaction. Seeking a Summer 2027 robotics internship.">
+<meta property="og:url" content="https://jihyunje.github.io/">
+<meta property="og:image" content="https://jihyunje.github.io/assets/images/crater-rover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
 </head>
-
-<body id="home">
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <!-- Your name is the separate return-to-home link. -->
-      <a class="home-link" href="index.html">Jihyun Jeon</a>
-      <nav aria-label="Main navigation">
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="container">
-    <section class="intro" aria-labelledby="intro-heading">
-      <!-- EDIT: Your short introduction. -->
-      <h1 id="intro-heading">Jihyun Jeon</h1>
-      <p class="subtitle">Robotics · Human–Robot Interaction</p>
-      <p>
-        I am a first year student in the Masters of Science in Robotics Systems Development program at <strong> Carnegie Mellon University</strong>.
-        Through my Masters program, I am learning industry-oriented systems engineering practices for taking a robotic system through the full development lifecycle.
-        I am passionate about developing and deploying systems that make an impact on people's everyday lives, and am looking for Summer Internships where I can use my technical skills to do so.
-      </p>
-      <a href="work.html">Explore my work</a>
-    </section>
-
-    <section class="section" aria-labelledby="featured-heading">
-      <h2 id="featured-heading">Selected projects</h2>
-      <p class="meta">A few highlights — click an item to see the full project page.</p>
-
-      <div class="featured-grid">
-        <article class="feature-card">
-          <a href="projects/CRATER.html">
-            <figure>
-              <img src="projects/CRATER/media/thumbnail.jpg" alt="CRATER rover thumbnail" loading="lazy">
-              <figcaption>CRATER</figcaption>
-            </figure>
-          </a>
-        </article>
-
-        <article class="feature-card">
-          <a href="projects/Tanny-Grams.html">
-            <figure>
-              <img src="projects/Tanny%20Grams/Media/thumbnail.png" alt="Tanny Grams thumbnail" loading="lazy">
-              <figcaption>Tanny Grams</figcaption>
-            </figure>
-          </a>
-        </article>
-
-        <article class="feature-card">
-          <a href="projects/coverage-planner.html">
-            <figure>
-              <img src="projects/coverage%20planner/media/thumbnail.png" alt="Coverage planner thumbnail" loading="lazy">
-              <figcaption>Coverage Planner</figcaption>
-            </figure>
-          </a>
-        </article>
-
-        <article class="feature-card">
-          <a href="projects/tennis-robot.html">
-            <figure>
-              <img src="projects/tennis%20robot/media/thumbnail.png" alt="Tennis robot thumbnail" loading="lazy">
-              <figcaption>Tennis Robot</figcaption>
-            </figure>
-          </a>
-        </article>
-
-        <article class="feature-card">
-          <a href="projects/surf.html">
-            <figure>
-              <img src="projects/surf/media/thumbnail.png" alt="SURF eye tracker thumbnail" loading="lazy">
-              <figcaption>SURF Eye Tracker</figcaption>
-            </figure>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="more-heading">
-      <h2 id="more-heading">More</h2>
-      <p>Explore the full site: <a href="work.html">Work</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">Jihyun Jeon · Robotics portfolio</div>
-  </footer>
+<body>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner">
+<a class="home-link" href="index.html">Jihyun Jeon</a><nav aria-label="Main navigation"><a href="work.html">Projects</a><a href="about.html">About</a><a href="resume.html">Resume</a><a class="nav-cta" href="contact.html">Contact</a></nav>
+</div></header><main id="main">
+<section class="hero"><div class="container hero-grid">
+<div>
+<p class="eyebrow">Robotics systems · Perception · Human–robot interaction</p>
+<h1>Hi, I'm Jihyun.<br>I build robots for the real world.</h1>
+<p class="lead">I'm a robotics master's student at Carnegie Mellon University with a computer science background from Caltech. My work spans field rovers, robot manipulation, planning, and interfaces that help people work with robots.</p>
+<div class="button-row">
+<a class="button" href="work.html">Explore projects ↗</a><a class="button secondary" href="resume.html">View resume</a>
+</div>
+</div>
+<aside class="hero-note" aria-label="Internship availability"><strong>Seeking Summer 2027 internships</strong><p>Interested in robotics engineering roles where I can help build, test, and deploy useful systems.</p></aside>
+</div></section>
+<section class="section"><div class="container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Selected work</p>
+<h2>Projects at a glance</h2>
+<p>What I built, what I worked on, and what each project demonstrates.</p>
+</div>
+<a class="text-link" href="work.html">All projects →</a>
+</div>
+<div class="project-grid">
+<article class="project-card"><a href="projects/CRATER.html"><div class="card-media">
+<img class="rover" src="assets/images/crater-rover.jpg" alt="CRATER rover during field testing" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">Field robotics · Team lead</p>
+<h3>CRATER rover</h3>
+<p>Led a student rover team through system integration and field validation for mobility and manipulation.</p>
+<span class="card-link">See the rover project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/Tanny-Grams.html"><div class="card-media">
+<img class="" src="projects/Tanny%20Grams/Media/thumbnail.png" alt="Tangram robot design and physical prototype" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">Computer vision · Manipulation</p>
+<h3>Tanny Grams</h3>
+<p>Built a robot workflow that detects tangram pieces, maps image coordinates to a workspace, and assembles a target shape.</p>
+<span class="card-link">See the manipulation project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/surf.html"><div class="card-media">
+<img class="eye" src="projects/surf/media/thumbnail.png" alt="VR gaze interface pointing toward a target" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">Research · Human–robot interaction</p>
+<h3>Gaze guided robot control</h3>
+<p>Explored how eye tracking in VR can express a user's intended target for more intuitive robot control.</p>
+<span class="card-link">See the research project →</span>
+</div></a></article>
+<article class="project-card"><a href="projects/coverage-planner.html"><div class="card-media">
+<img class="planner" src="projects/coverage%20planner/media/thumbnail.png" alt="Grid coverage path with obstacles and directional arrows" loading="lazy">
+</div>
+<div class="card-body">
+<p class="meta">Algorithms · Motion planning</p>
+<h3>Coverage planner</h3>
+<p>Implemented a wavefront planner that routes through a constrained grid while accounting for obstacles, turns, and a goal.</p>
+<span class="card-link">See the planning project →</span>
+</div></a></article>
+</div>
+</div></section>
+<section class="section"><div class="container">
+<div class="section-heading"><div><p class="eyebrow">Current work at CMU</p><h2>What I'm working on now</h2><p>Early stage systems work building on perception, manipulation, and human intent.</p></div></div>
+<div class="info-grid">
+<div class="info-box"><p class="meta">MRSD capstone · 2026–present</p><h2>Robotic surgical assistant</h2><p>Working on a voice commanded instrument retrieval and handover system. I'm helping define requirements across speech, perception, manipulation, and human-safe interaction.</p></div>
+<div class="info-box"><p class="meta">CMU Robotics Institute · 2026–present</p><h2>Shared-control painting assistant</h2><p>Developing teleoperation assistance for people with Parkinson's disease, with a focus on preserving user intent and agency. The work includes exploring intent-aware models and planning a formative user study.</p><p><a href="projects/painting-assistant.html">Read the research overview →</a></p></div>
+</div></div></section>
+<section class="section"><div class="container"><div class="callout">
+<div>
+<h2>Let's talk robotics.</h2>
+<p>I'd be glad to discuss a project, your team, or a Summer 2027 opportunity.</p>
+</div>
+<a class="button" href="contact.html">Get in touch →</a>
+</div></div></section></main><footer class="site-footer"><div class="container footer-inner">
+<span>© 2026 Jihyun Jeon</span><span><a href="work.html">Projects</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></span>
+</div></footer>
 </body>
 </html>

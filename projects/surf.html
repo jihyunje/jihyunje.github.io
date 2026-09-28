@@ -1,100 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SURF Eye Tracker — Jihyun Jeon</title>
-  <meta name="description" content="SURF eye tracker project page">
-
-  <style>
-    :root { --text: #222; --muted: #595959; --link: #174f87; --border: #d8dce0; --background: #fff; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--background); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.6; }
-    .container { width: min(100% - 2.5rem, 900px); margin: 0 auto; padding: 1.5rem 0; }
-    .site-header { position: sticky; top: 0; background: white; border-bottom: 1px solid var(--border); z-index: 10; }
-    .header-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.75rem 1rem; }
-    .home-link { color: var(--text); font-weight:700; text-decoration:none; }
-    nav a { margin-left: 1rem; color: var(--link); text-decoration:none; }
-    h1 { margin: 0 0 0.5rem; font-size: clamp(1.8rem, 4vw, 2.4rem); }
-    .meta { color: var(--muted); margin-bottom: 1rem; }
-    .lead { margin-bottom: 1.25rem; }
-    .gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
-    figure { margin: 0; border: 1px solid var(--border); padding: 0.5rem; background: #fff; }
-    img, video { width: 100%; height: auto; display:block; }
-    figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.9rem; }
-    .back-link { display:inline-block; margin-top: 1.5rem; }
-    .project-links a { color: var(--link); }
-    @media (max-width:480px){ .header-inner { flex-direction:column; align-items:flex-start; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaze guided robot control | Jihyun Jeon</title>
+<meta name="description" content="A VR eye tracking prototype exploring how gaze can communicate a target for higher level robot control. The research examined the interface and its path toward robot integration.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="home-link" href="../index.html">Jihyun Jeon</a>
-      <nav aria-label="Main navigation">
-        <a href="../work.html">Work</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <article id="project">
-      <h1>SURF Eye Tracker</h1>
-      <p class="meta">Human–robot interaction project · SURF 2024 · Summer research</p>
-      <p class="lead">A VR-based eye-tracking interface for intuitive teleoperation, where gaze data is used to infer user intent and guide a robot toward a target location in a shared control setting.</p>
-
-      <section aria-labelledby="gallery-heading">
-        <h2 id="gallery-heading">Gallery</h2>
-        <div class="gallery">
-          <figure>
-            <img src="surf/media/thumbnail.png" alt="SURF eye tracker thumbnail">
-            <figcaption>Eye-tracker interface overview.</figcaption>
-          </figure>
-
-          <figure>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
-              <iframe
-                src="https://www.youtube.com/embed/8kWFhJQyaf0"
-                title="SURF eye tracker demo"
-                style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <figcaption>Eye-tracking demo showing gaze-based target selection and robot guidance.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section aria-labelledby="details-heading">
-        <h2 id="details-heading">Project details</h2>
-
-        <h3>Overview</h3>
-        <p>The project explored a new way to assist users with severe motor disabilities by combining eye gaze intent recognition with a robot planning pipeline. The goal was to create an intuitive interface where a user could direct a mobile robot to a target in the scene without needing low-level steering commands.</p>
-
-        <h3>My contribution</h3>
-        <p>I developed and evaluated a VR eye-tracking interface using Meta Quest Pro capabilities, explored integration strategies for live camera data and gaze estimation, and studied how gaze signals could be used to identify user intent for higher-level mobile robot control.</p>
-
-        <h3>Tools and methods</h3>
-        <p>The project combined eye tracking, VR development, and robot navigation research. I evaluated native VR approaches and Unity-based implementations, and worked toward integrating the gaze interface with a motion planner that could interpret the user’s intended target as an input to robot control.</p>
-
-        <h3>Project documents</h3>
-        <p class="project-links">
-          <a href="surf/info/SURF_2024_final.pdf">Final report</a>
-          &nbsp;·&nbsp;
-          <a href="https://github.com/hedgehog412/UnityEyeTracker" target="_blank" rel="noopener noreferrer">GitHub repository</a>
-        </p>
-      </section>
-
-      <a class="back-link" href="../work.html">← Back to Work</a>
-    </article>
-  </main>
-
-  <footer>
-    <div class="container" style="color:var(--muted);font-size:0.9rem;">Jihyun Jeon · Robotics portfolio</div>
-  </footer>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner">
+<a class="home-link" href="../index.html">Jihyun Jeon</a><nav aria-label="Main navigation"><a href="../work.html" aria-current="page">Projects</a><a href="../about.html">About</a><a href="../resume.html">Resume</a><a class="nav-cta" href="../contact.html">Contact</a></nav>
+</div></header><main id="main" class="container"><article>
+<div class="project-hero">
+<p class="eyebrow">Human–robot interaction · Research</p>
+<h1>Gaze guided robot control</h1>
+<p class="lead">A VR eye tracking prototype exploring how gaze can communicate a target for higher level robot control. The research examined the interface and its path toward robot integration.</p>
+<div class="button-row">
+<a class="button" href="#demo">View demo and images ↓</a><a class="button secondary" href="../work.html">All projects</a>
+</div>
+</div>
+<section class="project-feature" aria-label="Project motion preview"><video class="scroll-video" data-src="../assets/previews/surf.m4v" poster="surf/media/thumbnail.png" muted loop playsinline controls preload="none" aria-label="VR eye tracking prototype in motion"></video><p>Short motion preview. Scroll down for the full demo and project images.</p></section><div class="project-content">
+<section aria-labelledby="story-heading"><h2 id="story-heading">The project</h2>
+<h3>Overview</h3>
+<p>The project explored a new way to assist users with severe motor disabilities by combining eye gaze intent recognition with a robot planning pipeline. The goal was to create an intuitive interface where a user could direct a mobile robot to a target in the scene without needing low-level steering commands.</p>
+<h3>My role</h3>
+<p>I developed and evaluated a VR eye-tracking interface using Meta Quest Pro capabilities, explored integration strategies for live camera data and gaze estimation, and studied how gaze signals could be used to identify user intent for higher-level mobile robot control.</p>
+<h3>Technical approach</h3>
+<p>The project combined eye tracking, VR development, and robot navigation research. I evaluated native VR approaches and Unity-based implementations, and worked toward integrating the gaze interface with a motion planner that could interpret the user’s intended target as an input to robot control.</p></section><aside class="project-aside"><h2>At a glance</h2>
+<p class="meta">2024 · Summer Undergraduate Research Fellowship</p>
+<h3>Project materials</h3>
+<ul>
+<li><a href="surf/info/SURF_2024_final.pdf">Final report</a></li>
+<li><a href="https://github.com/hedgehog412/UnityEyeTracker">GitHub repository</a></li>
+</ul></aside>
+</div>
+<section id="demo" class="project-media" aria-labelledby="demo-heading"><h2 id="demo-heading">Demo and images</h2>
+<div class="media-grid">
+<figure><img src="surf/media/thumbnail.png" alt="SURF eye tracker thumbnail" loading="lazy"><figcaption>Eye-tracker interface overview.</figcaption></figure><figure><div class="video-wrap"><iframe src="https://www.youtube.com/embed/8kWFhJQyaf0" title="SURF eye tracker demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<figcaption>Eye-tracking demo showing gaze-based target selection in the VR prototype.</figcaption></figure>
+</div></section>
+<a class="back-link" href="../work.html">← Back to all projects</a></article></main><footer class="site-footer"><div class="container footer-inner">
+<span>© 2026 Jihyun Jeon</span><span><a href="../work.html">Projects</a> · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a></span>
+</div></footer><script src="../assets/site.js" defer></script>
 </body>
 </html>

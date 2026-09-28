@@ -1,76 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact — Jihyun Jeon</title>
-  <meta name="description" content="Contact Jihyun Jeon">
-  <style>
-    :root { --text: #222; --muted: #595959; --link: #174f87; --border: #d8dce0; --background: #fff; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--background); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.7; }
-    .container { width: min(100% - 2.5rem, 800px); margin-inline: auto; }
-    .site-header { position: fixed; inset: 0 0 auto; z-index: 10; background: white; border-bottom: 1px solid var(--border); }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 4.5rem; }
-    .home-link { color: var(--text); font-weight: 650; text-decoration: none; }
-    nav { display: flex; gap: 1.25rem; }
-    main { padding-top: 4.5rem; }
-    .section { border-top: 1px solid var(--border); padding-block: 2.5rem; }
-    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.65rem; }
-    form { display: grid; gap: 1rem; max-width: 560px; }
-    label { display: grid; gap: 0.45rem; font-weight: 600; }
-    input, textarea { width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--border); border-radius: 0.5rem; font: inherit; background: #fff; color: var(--text); }
-    textarea { min-height: 160px; resize: vertical; }
-    button { appearance: none; border: 0; border-radius: 0.5rem; background: var(--link); color: white; padding: 0.8rem 1.2rem; font: inherit; font-weight: 600; cursor: pointer; width: fit-content; }
-    button:hover { opacity: 0.95; }
-    .form-note { color: var(--muted); margin-top: 0; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Jihyun Jeon</title>
+<meta name="description" content="Contact Jihyun Jeon about robotics projects and Summer 2027 internship opportunities.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="home-link" href="index.html">Jihyun Jeon</a>
-      <nav aria-label="Main navigation">
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="section" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p class="form-note">Send a message and I’ll get back to you.</p>
-
-      <form action="https://formspree.io/f/xvkgpbde" method="POST">
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@example.com" required>
-        </label>
-
-        <label>
-          Subject
-          <input type="text" name="_subject" placeholder="Project inquiry">
-        </label>
-
-        <label>
-          Message
-          <textarea name="message" placeholder="Tell me about your project or opportunity." required></textarea>
-        </label>
-
-        <button type="submit">Send message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">Jihyun Jeon · Robotics portfolio</div>
-  </footer>
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner">
+<a class="home-link" href="index.html">Jihyun Jeon</a><nav aria-label="Main navigation"><a href="work.html">Projects</a><a href="about.html">About</a><a href="resume.html">Resume</a><a class="nav-cta" href="contact.html" aria-current="page">Contact</a></nav>
+</div></header><main id="main">
+<div class="container">
+<div class="page-intro narrow">
+<p class="eyebrow">Contact</p>
+<h1>Let's connect.</h1>
+<p class="lead">Have a robotics project or Summer 2027 internship in mind? Send me a note. I'd be glad to talk.</p>
+</div>
+<section class="section"><div class="prose"><p>Email me directly at <a href="mailto:jihyunje@andrew.cmu.edu">jihyunje@andrew.cmu.edu</a>, or use the form below.</p></div><form class="contact-form" action="https://formspree.io/f/xvkgpbde" method="POST">
+<label for="name">Name<input id="name" type="text" name="name" autocomplete="name" required></label><label for="email">Email<input id="email" type="email" name="email" autocomplete="email" required></label><label for="subject">Subject<input id="subject" type="text" name="_subject" placeholder="Robotics internship or project"></label><label for="message">Message<textarea id="message" name="message" placeholder="Tell me a little about your team or idea." required></textarea></label><button class="button" type="submit">Send message →</button>
+</form></section>
+</div></main><footer class="site-footer"><div class="container footer-inner">
+<span>© 2026 Jihyun Jeon</span><span><a href="work.html">Projects</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></span>
+</div></footer>
 </body>
 </html>
